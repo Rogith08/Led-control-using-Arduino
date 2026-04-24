@@ -1,4 +1,7 @@
-# Led-control-using-Arduino
+### Name : ROGITH K
+### Reg No : 2122231110042
+
+# Exp : 1 : Led control using Arduino
 
 ## AIM
 To design and implement a system for LED control using an Arduino microcontroller and a push button.
@@ -12,16 +15,26 @@ Bread board </br>
 Jumber wire </br>
 
 ## PROCEDURE
-Step 1 Connect all the componets as per the circut diagram </br>
-Step 2 Open the Arduino IDE </br>
-Step 3 Go to file and select the new file option </br>
-Step 4 Type the program </br>
-Step 5 Go to file and select save option to save the program </br>
-Step 6 GO to sketch and select verify to compile the program </br>
-Step 7 If no error, Connect the Arduino board to your computer using a USB cable </br>
-Step 8 Select the correct board and port in the Arduino IDE </br>
-Step 8 GO to sketch and select verify to upload the program in the Arduino board </br>
-Step 9 Press the push button and observe the LED's behavior </br>
+Step 1 
+Connect all the componets as per the circut diagram </br>
+Step 2
+Open the Arduino IDE </br>
+Step 3
+Go to file and select the new file option </br>
+Step 4 
+Type the program </br>
+Step 5
+Go to file and select save option to save the program </br>
+Step 6
+GO to sketch and select verify to compile the program </br>
+Step 7 
+If no error, Connect the Arduino board to your computer using a USB cable </br>
+Step 8 
+Select the correct board and port in the Arduino IDE </br>
+Step 8 
+GO to sketch and select verify to upload the program in the Arduino board </br>
+Step 9 
+Press the push button and observe the LED's behavior </br>
 
 ## THEORY
 
@@ -58,9 +71,41 @@ Emergency Signaling System </br>
 Weighing Machines </br>
 
 ## CIRCUIT DIAGRAM
+<img width="1650" height="1275" alt="exp01_page-0001" src="https://github.com/user-attachments/assets/7b100f1a-651d-4603-a41f-3d5075f35986" />
 
 ## PROGRAM
+```
+bool button_status;
+
+void setup() {
+  pinMode(10,OUTPUT);
+  pinMode(5,INPUT);
+}
+
+void loop() {
+  button_status=digitalRead(5);
+  if (button_status== HIGH)
+  {
+    digitalWrite(10,HIGH);
+    delay(1000);
+    digitalWrite(10,LOW);
+    delay(3000);
+  }
+  else
+  digitalWrite(13,LOW);
+}
+```
 
 ## OUTPUT
 
+### LED ON - SWITCH ON:
+<img width="1277" height="894" alt="Screenshot 2026-04-24 145208" src="https://github.com/user-attachments/assets/32da223d-5ee0-49df-97a9-64bde14168ea" />
+
+
+
+### LED OFF  -SWITCH OFF :
+<img width="1269" height="892" alt="Screenshot 2026-04-24 172831" src="https://github.com/user-attachments/assets/c9c7ee5c-6d39-4b71-bdb3-9c7e7a5a3997" />
+
+
 ## RESULT
+Thus, The Simulation of LED in Arduino UNO is Successfully Completed.
