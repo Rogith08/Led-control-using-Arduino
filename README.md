@@ -78,7 +78,7 @@ Weighing Machines </br>
 bool button_status;
 
 void setup() {
-  pinMode(10,OUTPUT);
+  pinMode(12,OUTPUT);
   pinMode(5,INPUT);
 }
 
@@ -86,13 +86,13 @@ void loop() {
   button_status=digitalRead(5);
   if (button_status== HIGH)
   {
-    digitalWrite(10,HIGH);
+    digitalWrite(12,HIGH);
     delay(1000);
-    digitalWrite(10,LOW);
+    digitalWrite(12,LOW);
     delay(3000);
   }
   else
-  digitalWrite(13,LOW);
+  digitalWrite(12,LOW);
 }
 ```
 
